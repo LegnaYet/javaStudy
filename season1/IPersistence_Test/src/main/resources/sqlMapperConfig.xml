@@ -1,7 +1,7 @@
 <configration>
     <dataSource>
-        <property name="driverClass" value="com.mysql.jdbv.driver"></property>
-        <property name="jdbcUrl" value="jdbc:mysql:///study"></property>
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/study?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone = GMT"></property>
         <property name="username" value="root"></property>
         <property name="password" value="Ych121358"></property>
     </dataSource>

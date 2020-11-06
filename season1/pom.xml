@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>IPersistence_Test</module>
+        <module>IPersistence</module>
     </modules>
 
 

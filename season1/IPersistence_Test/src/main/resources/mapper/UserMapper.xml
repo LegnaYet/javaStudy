@@ -1,9 +1,9 @@
 <mapper namespace="user">
     <!-- sql的唯一标识：namespace.id来组成 ：statementId -->
-    <select id="selectList" resultType="com.legna.user.pojo.User">
+    <select id="selectList" resultType="com.legnaYet.mybatis.user.pojo.User">
         select * from user
     </select>
-    <select id="selectOne"  resultType="com.legna.user.pojo.User" paramterType="com.legna.user.pojo.User">
+    <select id="selectOne"  resultType="com.legnaYet.mybatis.user.pojo.User" parameterType="com.legnaYet.mybatis.user.pojo.User">
         select * from user where id = #{id} and username = #{username}
     </select>
 </mapper>
