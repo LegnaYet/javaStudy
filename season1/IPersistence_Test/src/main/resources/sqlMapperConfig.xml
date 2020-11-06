@@ -1,0 +1,11 @@
+<configration>
+    <dataSource>
+        <property name="driverClass" value="com.mysql.jdbv.driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql:///study"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="Ych121358"></property>
+    </dataSource>
+
+    <!-- 存放mapper标签全路径 -->
+    <mapper resource="mapper/UserMapper.xml"></mapper>
+</configration>
