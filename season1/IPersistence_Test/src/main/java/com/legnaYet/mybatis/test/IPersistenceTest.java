@@ -1,6 +1,7 @@
 package com.legnaYet.mybatis.test;
 
 import com.legnaYet.io.Resources;
+import com.legnaYet.mybatis.user.dao.IUserDao;
 import com.legnaYet.mybatis.user.pojo.User;
 import com.legnaYet.sqlSession.SqlSession;
 import com.legnaYet.sqlSession.SqlSessionFactory;
@@ -13,6 +14,7 @@ import java.beans.PropertyVetoException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @author yechenhao
@@ -29,7 +31,12 @@ public class IPersistenceTest {
         User user = new User();
         user.setId(1);
         user.setUsername("lucy");
-        User u = sqlSession.selectOne("user.selectOne", user);
-        System.out.println(u);
+//        User u = sqlSession.selectOne("user.selectOne", user);
+//        System.out.println(u);
+        IUserDao userDao = sqlSession.getMapping(IUserDao.class);
+        List<User> all = userDao.findAll();
+        System.out.println(all);
+//        User user1 = userDao.findByCondition(user);
+//        System.out.println(user1);
     }
 }

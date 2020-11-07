@@ -62,8 +62,8 @@ public class SimpleExecutor implements Executor{
         //7、封装返回结果集
         String resultType = mappedStatement.getResultType();
         Class<?> resultTypeClass = getClassType(resultType);
-        Object o = resultTypeClass.newInstance();
         while (resultSet.next()){
+            Object o = resultTypeClass.newInstance();
             //元数据
             ResultSetMetaData metaData = resultSet.getMetaData();
             for (int i = 1; i <= metaData.getColumnCount() ; i++) {
